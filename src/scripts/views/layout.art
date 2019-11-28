@@ -1,0 +1,61 @@
+
+<header class="header">
+
+</header>
+<div class="d-flex align-items-stretch" id="">
+  <div id="sidebar" class="sidebar py-3">
+    <div class="text-gray-400 text-uppercase px-3 px-lg-4 py-4 font-weight-bold small headings-font-family">菜单</div>
+    <ul class="sidebar-menu list-unstyled">
+      <a data-url="home" href="#/home" class='side-btn'>
+        <i class="glyphicon glyphicon-home mr-3 text-gray"></i><span>首页</span>
+      </a>
+      <a data-url="position" href="#/position"  class='side-btn'>
+        <i class="glyphicon glyphicon-plane mr-3 text-gray"></i>
+        <span>机票</span>
+      </a>
+      <a data-url="profile" href="#/profile" class="side-btn">
+        <i class="glyphicon glyphicon-user mr-3 text-gray"></i>
+        <span>个人</span>
+      </a>
+      <a data-url="userlist" href="#/userlist" class="side-btn">
+        <i class="glyphicon glyphicon-book mr-3 text-gray"></i>
+        <span>用户</span>
+      </a>
+      <!--li class="sidebar-list-item"><a href="#" data-toggle="collapse" data-target="#pages" aria-expanded="false"
+          aria-controls="pages" class="sidebar-link text-muted"><i
+            class="o-wireframe-1 mr-3 text-gray"></i><span>Pages</span></a>
+        <div id="pages" class="collapse">
+          <ul class="sidebar-menu list-unstyled border-left border-primary border-thick">
+            <li class="sidebar-list-item"><a href="#" class="sidebar-link text-muted pl-lg-5">Page one</a></li>
+            <li class="sidebar-list-item"><a href="#" class="sidebar-link text-muted pl-lg-5">Page two</a></li>
+            <li class="sidebar-list-item"><a href="#" class="sidebar-link text-muted pl-lg-5">Page three</a></li>
+            <li class="sidebar-list-item"><a href="#" class="sidebar-link text-muted pl-lg-5">Page four</a></li>
+          </ul>
+        </div>
+      </li-->
+      <a data-url="reg" href="#/reg" class="menu-loginout side-btn">
+        <i class="glyphicon glyphicon-leaf mr-3 text-gray"></i><span>注册</span>
+      </a>
+      <a data-url="login" href="#/login" class="menu-loginout side-btn">
+        <i class="glyphicon glyphicon-log-out mr-3 text-gray"></i><span>登出</span>
+      </a>
+    </ul>
+      <!--<div class="text-gray-400 text-uppercase px-3 px-lg-4 py-4 font-weight-bold small headings-font-family">EXTRAS</div>
+      <ul class="sidebar-menu list-unstyled">
+        <li class="sidebar-list-item"><a href="#" class="sidebar-link text-muted"><i
+              class="o-database-1 mr-3 text-gray"></i><span>Demo</span></a></li>
+        <li class="sidebar-list-item"><a href="#" class="sidebar-link text-muted"><i
+              class="o-imac-screen-1 mr-3 text-gray"></i><span>Demo</span></a></li>
+        <li class="sidebar-list-item"><a href="#" class="sidebar-link text-muted"><i
+              class="o-paperwork-1 mr-3 text-gray"></i><span>Demo</span></a></li>
+        <li class="sidebar-list-item"><a href="#" class="sidebar-link text-muted"><i
+              class="o-wireframe-1 mr-3 text-gray"></i><span>Demo</span></a></li>
+      </ul>-->
+  </div>
+  <div class="page-holder w-100 d-flex flex-wrap" id="pageh">
+    <section class="content-header mb-1 mt-1 d-flex col-lg-11" style="margin:0 auto;flex-direction:row;align-items:center;justify-content:space-between;">
+      
+    </section>
+    <div class="container-fluid px-xl-5" id="container-fluid"></div>
+  </div>
+</div>

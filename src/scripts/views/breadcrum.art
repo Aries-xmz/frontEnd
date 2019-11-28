@@ -1,0 +1,6 @@
+<div class="h3">{{breadcrumbMap.level1}}</div>
+<div>
+    <span class="h6">{{breadcrumbMap.level2}}</span>
+    <span class="h6">&gt;</span>
+    <span class="h6"><small>{{breadcrumbMap.level3}}</small></span>
+</div>

@@ -1,0 +1,88 @@
+<div class="col-lg-12 my-5">
+    <div class="card">
+        <div class="card-header">
+        <h3 class="text-uppercase mb-0">我的空间</h3>
+        </div>
+        <div class="card-body">
+        <form class="form-horizontal" type="patch" id="profile-update-form" method="patch" action="/api/profile">
+            <div class="row">
+                <div class="col-lg-4 row" style="height:20rem;align-items:center;justify-content:center">
+                {{if data.pic}}
+                    <img src="http://localhost:3000/uploads/{{data.pic}}" id="profile-pic" title="头像" alt="再怎么找也什么都没有啦" style="background:#eee;width:10rem">
+                {{else}}
+                    <img src="http://localhost:3000/uploads/nophoto.jpg" id="profile-pic" title="头像" alt="再怎么找也什么都没有啦" style="background:#eee;width:10rem">
+                {{/if}}
+                    <input type="file" name='pic'  class="form-control" >
+                </div>
+                <div class="col-lg-8">
+                    <div class="form-group row">
+                        <label class="col-md-3 form-control-label">昵称</label>
+                        <div class="col-md-9">
+                            <p class="form-control bg-secondary text-white">{{data.username}}</p>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="form-group row">
+                        <label class="col-md-3 form-control-label">性别</label>
+                        <div class="col-md-9 row">
+                            <label class="form-control col-md-3">
+                                {{if data.sex == 0}}
+                                <input type="radio" name="sex" id="optionsRadios1" value=0 checked="">
+                                {{else}}
+                                <input type="radio" name="sex" id="optionsRadios1" value=0>
+                                {{/if}}
+                                帅哥
+                            </label>
+                            <label class="form-control col-md-3">
+                                {{if data.sex == 1}}
+                                <input type="radio" name="sex" id="optionsRadios2" value=1 checked="">
+                                {{else}}
+                                <input type="radio" name="sex" id="optionsRadios2" value=1>
+                                {{/if}}
+                                美女
+                            </label>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="form-group row">
+                        <label for="date" class="col-md-3 form-control-label">生日</label>
+                        <div class="col-md-9">
+                            <input type="date" id="date"  name="birthday" class="form-control"value="{{data.birthday}}">
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="form-group row">
+                        <label class="col-md-3 form-control-label">年龄</label>
+                        <div class="col-md-9">
+                            <p class="form-control bg-secondary text-white" ></p>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="form-group row">
+                        <label class="col-md-3 form-control-label">星座</label>
+                        <div class="col-md-9">
+                            <p class="form-control bg-secondary text-white" ></p>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="form-group row">
+                        <label class="col-md-3 form-control-label">个性签名</label>
+                        <div class="col-md-9">
+                            <input type="text" name="signature" placeholder="请输入一段话概括自己..." class="form-control" value="{{data.signature}}">
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <input type="hidden" name="id" value="{{data._id}}">
+                    <input type="hidden" name="tempPic" value="{{data.pic}}"
+                    <div class="form-group row">
+                        <div class="col-md-9 ml-auto">
+                            <button id="btn-posback" type="button" class="btn btn-secondary">返回</button>
+                            <button id="btn-profileupdate" type="submit" class="btn btn-primary">确认修改</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        </div>
+    </div>
+</div>
