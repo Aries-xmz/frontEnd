@@ -10,6 +10,7 @@ import * as profile from '../controllers/profile'
 import breadcrumView from '../views/breadcrum.art'
 import headerController from '../controllers/header'
 import {reg} from '../controllers/reg'
+import order from '../controllers/order'
 const router = new SMERouter('container-fluid')
 
 router.use((req) => {
@@ -47,6 +48,13 @@ router.use((req) => {
                 level3: '用户列表'
             }
             break;
+        case 'order':
+            breadcrumbMap = {
+                level1: '订单列表',
+                level2: '海南航空后台管理系统',
+                level3: '订单列表'
+            }
+            break;
         default:
             breadcrumbMap = {
                 level1: '',
@@ -70,6 +78,7 @@ router.route('/position', position.list)
 router.route('/position_add', position.add)
 router.route('/position_update', position.update)
 router.route('/position_list/:page',position.list)
+router.route('/order',order)
 
 
 router.route('*', (req, res, next) => {

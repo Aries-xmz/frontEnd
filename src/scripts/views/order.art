@@ -1,0 +1,75 @@
+<div class="col-lg-12 my-5">
+    <div class="card">
+        <div class="card-header"><h3 class="text-uppercase mb-0">订单管理</h3></div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-2"><button class="btn btn-success mb-4" id="btn-add"><span class="glyphicon glyphicon-plus-sign"></span>添加</button></div>
+                <div class="col-md-3"><button class="btn btn-info mb-4" id="btn-all"><span class="glyphicon glyphicon-list-alt"></span>获取全部数据</button></div>
+                <div class="col-md-7">
+                    <div class="form-group">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                            <button id="button-addon1" type="button" class="btn btn-primary"><i class="glyphicon glyphicon-search"></i></button>
+                            </div>
+                            <input id="search" type="text" placeholder="请输入起始地或目的地" class="form-control">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{if !list}}
+            <table class="table card-text">
+                <tr><td>暂时咩有数据</td></tr>
+            </table>
+            {{else}}
+            <table class="table card-text">
+                <thead> 
+                    <tr>
+                        <th>#</th>
+                        <th>出发地</th>
+                        <th>目的地</th>
+                        <th>计划起飞时间</th>
+                        <th>计划到达时间</th>
+                        <th>经济舱票价</th>
+                        <th>头等舱票价</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {{each list}}
+                    <tr>
+                        <th scope="row">{{$index + 1}}</th>
+                        <td>{{$value.dep}}</td>
+                        <td>{{$value.des}}</td>
+                        <td>{{$value.depdate}} {{$value.deptime}}</td>
+                        <td>{{$value.desdate}} {{$value.destime}}</td>
+                        <td><span class="">￥</span><span>{{$value.economyfare}}</span></td>
+                        <td><span class="">￥</span><span>{{$value.firstclassfare}}</span></td>
+                        <td>
+                            <span>
+                                <button data-id="{{$value._id}}" class="btn btn-warning btn-update"><span class="glyphicon glyphicon-edit"></span>修改</button>
+                            </span>
+                            <span>
+                                <button data-id="{{$value._id}}" class="btn btn-danger btn-delete"><span class="glyphicon glyphicon-minus-sign"></span>删除</button>
+                            </span>
+                        </td>
+                    </tr>
+                {{/each}}
+                </tbody>
+            </table>
+            <nav aria-label="...">
+                <ul class="pagination">
+                    <li class="page-item"><span class="page-link page-up" aria-label="Previous"><span aria-hidden="true">«</span></span></li>
+                    {{each pageCount}}
+                    {{if currentPage === $value}}
+                    <li class="page-item active"><span class="page-link">{{$value}}</span></li>
+                    {{else}}
+                    <li class="page-item"><span class="page-link page-num">{{$value}}</span></li>
+                    {{/if}}
+                    {{/each}}
+                    <li class="page-item"><span class="page-link page-down" aria-label="Next"><span aria-hidden="true">»</span></span></li>
+                </ul>
+            </nav>
+            {{/if}}
+        </div>
+    </div>
+</div>

@@ -21,6 +21,10 @@
         <i class="glyphicon glyphicon-book mr-3 text-gray"></i>
         <span>用户</span>
       </a>
+      <a data-url="order" href="#/order"  class='side-btn'>
+        <i class="glyphicon glyphicon-plane mr-3 text-gray"></i>
+        <span>订单</span>
+      </a>
       <!--li class="sidebar-list-item"><a href="#" data-toggle="collapse" data-target="#pages" aria-expanded="false"
           aria-controls="pages" class="sidebar-link text-muted"><i
             class="o-wireframe-1 mr-3 text-gray"></i><span>Pages</span></a>

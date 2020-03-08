@@ -10,7 +10,7 @@ export const login = async (req, res, next) => {
         if (username && password) {
             let result = await httpModel.get({
                 type: "POST",
-                url: '/api/users/signin',
+                url: '/api/admin/signin',
                 data
             })
             if (result.ret) {

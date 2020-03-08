@@ -4,7 +4,7 @@ import store from 'store'
 class Header {
     async render() {
         let result = await httpModel.get({
-            url: '/api/users/isSignin',
+            url: '/api/admin/isSignin',
         })
         let isSignin = result.data.isSignin
         let username = result.data.username

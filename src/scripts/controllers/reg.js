@@ -7,7 +7,7 @@ export const reg =async (req,res,next)=> {
         let data = $('#regForm').serialize()
         let result = await httpModel.get({
             type: "POST",
-            url: '/api/users/signup',
+            url: '/api/admin/signup',
             data
         })
         alert(result.data.message)
