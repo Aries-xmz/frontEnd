@@ -1,2 +1,2 @@
 # frontEnd
-就是个后台管理系统，用了bootstrap,jquery,jqueryform,scss
+仿海南航空m站的后台管理系统，用了bootstrap,jquery,jqueryform,scss
